@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { GifsService } from 'src/app/services/gifs.service';
 
 
-
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
@@ -19,6 +18,10 @@ export class SidebarComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+  }
+
+  applyHistorySearch(query: string) {
+    this.gifsService.onSearch(query);
   }
 
 }

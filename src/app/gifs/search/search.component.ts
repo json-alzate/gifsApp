@@ -21,10 +21,8 @@ export class SearchComponent implements OnInit {
   } 
 
   // si se recibe el evento de tipo keyboardEvent y se imprime en consola, se puede saber que tecla se presiona
-
   search() {
     const query = this.textToSearch.nativeElement.value;
-    console.log('event ', query);
     this.gifsService.onSearch(query);
     this.textToSearch.nativeElement.value = '';
   }
